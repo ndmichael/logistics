@@ -5,10 +5,16 @@ from django.http import JsonResponse, HttpResponse
 
 
 def index (request):
-    return HttpResponse("<h1>testing about us </h1>")
+    return render(request, 'shipment/index.html')
 
 def about (request):
-    pass
+    return render(request, 'shipment/about.html')
+
+def track (request):
+        return render(request, 'shipment/track.html')
+
+def services (request):
+    return render(request, 'shipment/services.html')
 
 def contact (request):
-    pass
+    return render(request, 'shipment/contact.html')

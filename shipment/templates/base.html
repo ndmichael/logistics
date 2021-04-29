@@ -5,14 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="{% static 'shipment/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'shipment/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'shipment/css/icofont/icofont.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'shipment/css/main.css' %}"
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'shipment_index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shipment_about' %}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shipment_track' %}">Tracking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shipment_service' %}">Services</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >  Contact Us</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     {% block content %}
         
     {% endblock content %}
 
+
+    <footer>
+        <div class=" container">
+            <div class="row">
+                <div class="col-12 col md-6 offset-3">
+
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="{% static 'shipment/js/bootstrap.min.js' %}">
     </script>

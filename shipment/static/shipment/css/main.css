@@ -1,0 +1,16 @@
+#header {
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.3)), url("/static/shipment/images/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+#brief-abt {
+    text-align: center;
+}
+
+/* linear-gradient(rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.9)), */
