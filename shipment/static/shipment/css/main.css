@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
+.secondary_color {
+    color: #555dc1;
+    /* color: #a4acdc; */
+}
+
 #header {
     height: 70vh;
     width: 100%;
-    background-image: linear-gradient(to right,  rgba(54, 55, 149,  0.9),rgba(54, 55, 151,  0.7)), url("/static/shipment/images/frank-mckenna-trial.jpg");
+    background-image: linear-gradient(to right,  rgba(54, 55, 149,  0.9),rgba(54, 55, 151,  0.7)), url("/static/shipment/images/bg2.jpg");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -61,11 +66,15 @@ p {
 
 #brief-abt h2 span {
     font-weight: 900;
-    color: #6610f2;
+    color: #7b83eb;
 }
 
 #brief-abt p {
     font-size: 18px;
+}
+
+#services .icofont {
+    filter: drop-shadow(20px 10px 0.5px #e0e0e0);
 }
 
 /* linear-gradient(rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.9)), */
