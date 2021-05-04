@@ -3,7 +3,7 @@
 #header {
     height: 70vh;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.7)), url("/static/shipment/images/frank-mckenna-trial.jpg");
+    background-image: linear-gradient(to right,  rgba(54, 55, 149,  0.9),rgba(54, 55, 151,  0.7)), url("/static/shipment/images/frank-mckenna-trial.jpg");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -12,11 +12,14 @@
 
 h1, h2, h3, h4, h4, h6 {
     font-family: 'Black Han Sans', sans-serif;
+    /* font-family: 'Gotham Rounded'; */
+    font-weight: 100;
 }
 
 p {
     font-family: 'Avalon';
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
 }
 
 
@@ -54,6 +57,15 @@ p {
 
 #brief-abt {
     text-align: center;
+}
+
+#brief-abt h2 span {
+    font-weight: 900;
+    color: #6610f2;
+}
+
+#brief-abt p {
+    font-size: 18px;
 }
 
 /* linear-gradient(rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.9)), */

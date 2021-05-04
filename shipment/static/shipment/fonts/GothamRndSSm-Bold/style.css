@@ -4,6 +4,6 @@
         url('GothamRndSSm-Bold.woff2') format('woff2'),
         url('GothamRndSSm-Bold.woff') format('woff'),
         url('GothamRndSSm-Bold.ttf') format('truetype');
-    font-weight: 700;
+    /* font-weight: 700; */
     font-style: normal;
   }
