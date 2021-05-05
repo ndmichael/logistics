@@ -5,8 +5,32 @@
     /* color: #a4acdc; */
 }
 
+.navbar-light {
+    padding: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,1);
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1.7px;
+    font-family: 'Avalon';
+    font-size: 18px;
+    padding: 15px;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #555dc1;
+}
+
+.navbar-light .navbar-brand {
+    color: #7b83eb !important;
+    font-size: 28px;
+}
+
 #header {
-    min-height: 70vh;
+    min-height: 75vh;
     width: 100%;
     background-image: linear-gradient(to right,  rgba(54, 55, 149,  0.9),rgba(54, 55, 151,  0.4)), url("/static/shipment/images/bg2.jpg");
     background-size: cover;
@@ -46,7 +70,7 @@
 }
 
 h1, h2, h3, h4, h4, h6 {
-    font-family: 'Black Han Sans', sans-serif;
+    /* font-family: 'Black Han Sans', sans-serif; */
     font-family: 'Gotham Rounded';
     font-weight: 100;
 }
