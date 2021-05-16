@@ -132,3 +132,19 @@ p {
 }
 
 /* linear-gradient(rgba(0, 92, 151,  0.9), rgba(54, 55, 149,  0.9)), */
+
+
+/** **/
+footer {
+    padding: 2em 0;
+}
+footer a {
+    text-decoration: none;
+    color: #7b83eb;
+}
+
+footer a:hover {
+    color: #555dc1;
+}
+
+
