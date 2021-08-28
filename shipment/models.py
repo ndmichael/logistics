@@ -69,6 +69,7 @@ class ItemDetail (models.Model):
     quantity = models.IntegerField()
     description = models.TextField(max_length= 1000)
     weight = models.CharField(max_length=10)
+    image = models.ImageField(upload_to='food_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
     status = models.CharField(choices=STATUS, default='PENDING', max_length=15)
     problem_type = models.CharField(choices=PROBLEM, default='PENDING', max_length=15)
