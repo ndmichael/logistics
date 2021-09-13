@@ -13,8 +13,8 @@ class ItemSender(models.Model):
     company = models.CharField(max_length=150)
     address =  models.CharField(max_length=150, blank=False, null=False)
     postal_code = models.CharField(max_length=150, blank=False, null=False)
-    country = models.CharField(max_length=100, blank=False, null=False)
     city = models.CharField(max_length=100, blank=False, null=False)
+    country = models.CharField(max_length=100, blank=False, null=False)
     date_sent = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -33,8 +33,8 @@ class ItemReciever(models.Model):
     email = models.EmailField(max_length=200, blank=False, null=False)
     address =  models.CharField(max_length=150, blank=False, null=False)
     postal_code = models.CharField(max_length=150, blank=False, null=False)
-    country = models.CharField(max_length=100, blank=False, null=False)
     city = models.CharField(max_length=100, blank=False, null=False)
+    country = models.CharField(max_length=100, blank=False, null=False)
     date_created = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -57,9 +57,10 @@ class ItemDetail (models.Model):
 
     PROBLEM = (
         ('paperwork', 'PAPERWORK_OVERLOAD'),
-        ('custom_clerance', 'CUSTOM CLEARANCE'),
+        ('custom clerance', 'CUSTOM CLEARANCE'),
         ('bad weather', 'BAD WEATHER'),
-        ('holidays', 'HOLYDAYS')
+        ('holidays', 'HOLYDAYS'),
+        ('no problem', 'No Problems'),
     )
 
     item_sender = models.ForeignKey(ItemSender, on_delete=models.CASCADE)
@@ -72,7 +73,7 @@ class ItemDetail (models.Model):
     image = models.ImageField(upload_to='food_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
     status = models.CharField(choices=STATUS, default='PENDING', max_length=15)
-    problem_type = models.CharField(choices=PROBLEM, default='PENDING', max_length=15)
+    problem_type = models.CharField(choices=PROBLEM, default='NO PROBLEM', max_length=15)
     item_code = models.CharField(max_length=20)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
