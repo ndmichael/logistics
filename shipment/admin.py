@@ -7,6 +7,12 @@ class ItemDetailInline(admin.TabularInline):
     raw_id_fields = ['item_sender']
 
 
+@admin.register(ItemDetail)
+class ItemDetailAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'quantity','description', 'weight', 'image', 'paid', 'status', 'problem_type', 'item_code', 'date_sent', 'date_recieved']
+    prepopulated_fields = {"slug": ("name",)}
+
+
 @admin.register(ItemSender)
 class ItemSenderAdmin(admin.ModelAdmin):
     list_display = ['user', 'company', 'address','postal_code', 'country', 'city', 'date_sent']
