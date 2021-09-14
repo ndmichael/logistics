@@ -56,11 +56,11 @@ class ItemDetail (models.Model):
     )
 
     PROBLEM = (
+        ('no problem', 'No Problems'),
         ('paperwork', 'PAPERWORK_OVERLOAD'),
         ('custom clerance', 'CUSTOM CLEARANCE'),
         ('bad weather', 'BAD WEATHER'),
         ('holidays', 'HOLYDAYS'),
-        ('no problem', 'No Problems'),
     )
 
     item_sender = models.ForeignKey(ItemSender, on_delete=models.CASCADE)
@@ -83,4 +83,4 @@ class ItemDetail (models.Model):
         ordering = ('-date_sent', '-date_recieved')
 
     def __str__(self):
-        return f'{self.iname}'
+        return f'{self.name}'
