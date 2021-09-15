@@ -18,7 +18,7 @@ def track_item (request):
         form = ItemTrackForm(request.GET)
         if form.is_valid():
             q = form.cleaned_data['q']
-            item = ItemDetail.objects.get(item_code=q)
+            item = ItemDetail.objects.filter(item_code=q).first()
             
     context = {
         'form': form,
