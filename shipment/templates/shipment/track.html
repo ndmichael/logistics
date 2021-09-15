@@ -8,6 +8,7 @@
                     <input type="submit" class=" btn btn-lg btn-warning" value="Track Now">
                 </form>
             </div>
+            {% if item %}
             <div class=" offset-3 col-3 bg-light">
                 <div></div>
                 <div>
@@ -21,6 +22,11 @@
                     <p>{{ item.item_code }}</p>
                 </div>
             </div>
+            {% else %}
+            <div>
+                <h3>Item doesnt exist</h3>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>
