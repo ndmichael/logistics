@@ -1,14 +1,27 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
-    <section>
-        <div class=" container">
-            <div class=" row">
-                <div class=" col-12">
-                    <h1>TRACK SESSION</h1>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="py-5">
+    <div class=" container">
+        <div class=" row">
+            <div class=" offset-3 col-6 mb-5">
+                <form action="" method="GET">
+                    {{ form.as_p }}
+                    <input type="submit" class=" btn btn-lg btn-warning" value="Track Now">
+                </form>
+            </div>
+            <div class=" offset-3 col-3 bg-light">
+                <div></div>
+                <div>
+                    <h3>SENDER: </h3>
+                    <p>{{ item.item_reciever.fullname }}</p>
+                </div>
+            </div>
+            <div class="col-3 bg-warning">
+                <div>
+                    <h3>ITEM_CODE: </h3>
+                    <p>{{ item.item_code }}</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock content %}
