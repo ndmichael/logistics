@@ -13,9 +13,10 @@ def about (request):
     return render(request, 'shipment/about.html')
 
 def track_item (request):
-    form = ItemTrackForm
-    if 'q' in request.GET:
-        form = ItemTrackForm(request.GET)
+    form = ItemTrackForm()
+    item=None
+    if 'q' in request.POST:
+        form = ItemTrackForm(request.POST)
         if form.is_valid():
             q = form.cleaned_data['q']
             item = ItemDetail.objects.filter(item_code=q).first()
