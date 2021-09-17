@@ -1,14 +1,72 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="py-5 bg-light">
+    <div class=" container">
+        <article class=" row">
+            <div class=" offset-md-1 col-12 col-md-6 mb-5">
+                <form action="" method="POST">
+                    {% csrf_token %} {{ form.as_p }}
+                    <input type="submit" class=" btn btn-lg btn-warning" value="Track Now">
+                </form>
+            </div>
+        </article>
 
-{% block content %}
-    <section>
-        <div class=" container">
-            <div class=" row">
-                <div class=" col-12">
-                    <h1>TRACK SESSION</h1>
+        <article class="row ">
+            <div class="col-12 offset-md-1 col-md-5 p-3 mx-auto">
+                <div class=" d-flex justify-content-between">
+                    <h3 style="display: inline-block;" class="pr-4">Senders Name: </h3>
+                    <p class="secondary_color py-1">{{ item.item_sender }}</p>
+                </div>
+                <div class=" d-flex justify-content-between pt-3">
+                    <div>
+                        <h4 style="display: inline-block;">Item Code: </h4>
+                        <p class="secondary_color">{{ item.name }}</p>
+                    </div>
+                    <div>
+                        <h4>Item Code: </h4>
+                        <p class="secondary_color">{{ item.item_code|truncatechars:7 }}</p>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <p>{{ item.description }}</p>
+                </div>
+                <div class=" d-flex justify-content-between py-3">
+                    <div>
+                        <span class=" icofont icofont-muscle-weight icofont-2x secondary_color"></span> <br />
+                        <span>Weight: <b> {{ item.weight }} </b> </span>
+                    </div>
+                    <div>
+                        <span class=" icofont icofont-gift-box icofont-2x secondary_color"></span> <br />
+                        <span>Quantity: <b>{{ item.quantity }}</b></span>
+                    </div>
+                    <div>
+                        <span class=" icofont icofont-money icofont-2x secondary_color"></span> <br />
+                        <span>Paid: <b> {{ item.paid }} </b> </span>
+                    </div>
+                </div>
+
+                <div class=" d-flex justify-content-between pt-3">
+                    <div>
+                        <h5>Problem:</h5>
+                        <p class=" secondary_color"><b>{{ item.problem_type }}</b></p>
+                    </div>
+                    <div>
+                        <h5>Status:</h5>
+                        <p class=" secondary_color"><b>{{ item.status }}</b></p>
+                    </div>
+                    <div>
+                        <h5>Date Sent:</h5>
+                        <p class=" secondary_color"><b>{{ item.date_sent }}</b></p>
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="col-12 col-md-5">
+                <div>
+                    <img class="shadow-lg img-fluid" src="{{ item.image.url }}" style="min-width:100%; height: 400px; object-fit: cover; object-position:center;" />
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
 {% endblock content %}

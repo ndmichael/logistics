@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse, HttpResponse
+from shipment.forms import ItemTrackForm
+from shipment.models import ItemDetail
 
 # Create your views here.
 
@@ -10,8 +12,20 @@ def index (request):
 def about (request):
     return render(request, 'shipment/about.html')
 
-def track (request):
-        return render(request, 'shipment/track.html')
+def track_item (request):
+    form = ItemTrackForm()
+    item=None
+    if 'q' in request.POST:
+        form = ItemTrackForm(request.POST)
+        if form.is_valid():
+            q = form.cleaned_data['q']
+            item = ItemDetail.objects.filter(item_code=q).first()
+            
+    context = {
+        'form': form,
+        'item': item
+    }
+    return render(request, 'shipment/track.html', context)
 
 def services (request):
     return render(request, 'shipment/services.html')
