@@ -6,7 +6,7 @@ from shipment import views as shipment_views
 urlpatterns = [
     path('', shipment_views.index, name='shipment_index'),
     path('about/', shipment_views.about, name='shipment_about'),
-    path('conact/', shipment_views.contact, name='shipment_contact'), 
+    path('contact/', shipment_views.contact, name='shipment_contact'), 
     path('tracking/', shipment_views.track_item, name='shipment_track'),
     path('service/', shipment_views.services, name='shipment_service'),  
 
