@@ -35,12 +35,21 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'shipment',
+    'clients',
+    "crispy_forms",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # allauth
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    # 'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.facebook',
+    "django.contrib.sites",
 ]
 
 MIDDLEWARE = [
@@ -128,6 +137,14 @@ STATICFILES_DIRS = []
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# django-allauth registraion settings
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
 
 # allauth setups
