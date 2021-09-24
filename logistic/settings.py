@@ -35,7 +35,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'shipment',
-    'clients',
+    'client',
     "crispy_forms",
     'django.contrib.admin',
     'django.contrib.auth',
