@@ -20,12 +20,12 @@
                 <div class=" d-grid gap-2">
                     <button class="btn btn-warning btn-lg shadow " type="submit">{% trans "SIGN IN" %}</button>
                 </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-around px-1 py-5">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-around px-1 pt-5 pb-2">
                     <button class="btn btn-outline-primary col-6" type="button">LOGIN WITH FACEBOOK</button>
                     <button class="btn btn-outline-danger col-6" type="button">LOGIN WITH GOOGLE</button>
                 </div>
 
-                <a class="button secondaryAction text-muted" href="{% url 'account_reset_password' %}">forget
+                <a class="button secondaryAction secondary_color" href="{% url 'account_reset_password' %}">forget
                     password?</a>
             </form>
             {% if socialaccount_providers %}
