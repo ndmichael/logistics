@@ -146,6 +146,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+ACCOUNT_FORMS = {'signup': 'client.forms.MyCustomSignupForm'}
 
 # allauth setups
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
