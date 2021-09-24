@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'shipment/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'shipment/css/icofont/icofont.min.css' %}" />
     <link rel="stylesheet" href="{% static 'shipment/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'client/css/client.css' %}" />
     <link rel="stylesheet" href="{% static 'shipment/fonts/Avalon-Book/style.css' %}" />
     <link rel="stylesheet" href="{% static 'shipment/fonts/GothamRndSSm-Bold/style.css' %}" />
 </head>
@@ -42,10 +43,10 @@
           </div>
         </div>
       </nav>
+      
     {% block content %}
         
     {% endblock content %}
-
 
     <footer class="border-top bg-light">
         <div class=" container">
@@ -75,9 +76,6 @@
     </footer>
 
     <script src="{% static 'shipment/js/bootstrap.min.js' %}">
-    </script>
-    
-
-    
+    </script> 
 </body>
 </html>
