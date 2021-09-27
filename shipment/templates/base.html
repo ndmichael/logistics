@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,70 +12,88 @@
     <link rel="stylesheet" href="{% static 'shipment/fonts/Avalon-Book/style.css' %}" />
     <link rel="stylesheet" href="{% static 'shipment/fonts/GothamRndSSm-Bold/style.css' %}" />
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm">
         <div class="container">
-          <a class="navbar-brand" href="/" >SSDelivery</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'shipment_index' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'shipment_about' %}">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'shipment_track' %}">Tracking</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'shipment_service' %}">Services</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" >  Contact Us</a>
-                  </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="/">SSDelivery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'shipment_index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shipment_about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shipment_track' %}">Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shipment_service' %}">Services</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class=" icofont icofont-ui-user secondary_color"></i> Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item d-grid gap-2" href="{% url 'account_login' %}">
+                                <span class=" btn btn-warning">
+                  LOGIN
+                </span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item mr-5" href="#">
+                                <i class=" icofont icofont-ui-user"></i>
+                                <span> Account</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-      
-    {% block content %}
-        
-    {% endblock content %}
+    </nav>
+
+    {% block content %} {% endblock content %}
 
     <footer class="border-top bg-light">
         <div class=" container">
             <div class="row">
                 <div class="col-12 col-md-4 offset-md-4 text-center">
                     <div class="d-flex justify-content-evenly">
-                      <a href="">
-                        <i class=" icofont icofont-2x icofont-whatsapp rounded-circle border p-2"></i>
-                      </a>
-                      <a href="">
-                        <i class=" icofont icofont-2x icofont-contact-add rounded-circle border p-2"></i>
-                      </a>
-                      <a href="">
-                        <i class=" icofont icofont-2x icofont-facebook rounded-circle border p-2"></i>
-                      </a> 
-                      <a href="">
-                        <i class=" icofont icofont-2x icofont-linkedin rounded-circle border p-2"></i>
-                      </a> 
+                        <a href="">
+                            <i class=" icofont icofont-2x icofont-whatsapp rounded-circle border p-2"></i>
+                        </a>
+                        <a href="">
+                            <i class=" icofont icofont-2x icofont-contact-add rounded-circle border p-2"></i>
+                        </a>
+                        <a href="">
+                            <i class=" icofont icofont-2x icofont-facebook rounded-circle border p-2"></i>
+                        </a>
+                        <a href="">
+                            <i class=" icofont icofont-2x icofont-linkedin rounded-circle border p-2"></i>
+                        </a>
                     </div> <br /> <br />
-                    <div> 
-                      <p><b class=" secondary_color"> &copy; </b> Supersonic Delivery Services | Terms  </p>
+                    <div>
+                        <p><b class=" secondary_color"> &copy; </b> Supersonic Delivery Services | Terms </p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="{% static 'shipment/js/bootstrap.min.js' %}">
-    </script> 
+    </script>
 </body>
+
 </html>
