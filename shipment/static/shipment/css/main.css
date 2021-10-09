@@ -36,6 +36,14 @@
     color: #FFFFFF;
 }
 
+.feature {
+    min-height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("/static/shipment/images/Transparent-background-with-dots.png");
+    background-size: cover;
+    background-position: center;
+}
+
 #services2 {
     min-height: 70vh;
     width: 100%;
