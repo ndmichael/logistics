@@ -81,7 +81,18 @@
         </div>
     </nav>
 
-    {% block content %} {% endblock content %}
+    <!-- Flash message-->
+    {% if messages %}
+    <div class="row my-4">
+        <div class="offset-sm-3 col-sm-6 text-center">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                <h5>{{ message }}</h5>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %} {% block content %} {% endblock content %}
 
     <footer class="border-top bg-light">
         <div class=" container">
