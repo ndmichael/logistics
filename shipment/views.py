@@ -40,8 +40,8 @@ def contact (request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             print("Success")
-            messages.success(request, f"Recipe for {name} added successfully")
-            return redirect("shipment_index")
+            messages.success(request, f"message have been sent successfully")
+            return redirect("contact")
         else:
             print("Failed form submission")
     
