@@ -9,3 +9,8 @@ class ItemTrackForm(forms.Form):
         self.fields['q'].widget.attrs.update({
             'class': 'form-control form-control-lg'
         })
+
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea(attrs={'rows': '7'}))
