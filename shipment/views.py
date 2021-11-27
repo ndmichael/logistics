@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
 from shipment.forms import ItemTrackForm, ContactForm
 from shipment.models import ItemDetail
+from django.core.mail import send_mail, BadHeaderError
 
 # Create your views here.
 
@@ -39,7 +40,10 @@ def contact (request):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            print("Success")
+            try:
+                send_mail(name, message, email, ['sdelivery@biz.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid Header')
             messages.success(request, f"message have been sent successfully")
             return redirect("contact")
         else:

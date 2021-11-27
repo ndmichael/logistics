@@ -1,9 +1,14 @@
 {% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %} {% block content %}
-<section>
+<section class="py-5">
     <div class=" container">
+        <div class="row">
+            <div class="col-12 offset-1 pt-2 pb-5">
+                <span class=" secondary_color">get in touch now!!!</span>
+                <h2>How can we help?</h2>
+            </div>
+        </div>
         <div class=" row">
-            <div class="col-12 col-md-6"></div>
-            <div class=" col-12 col-md-6">
+            <div class=" col-12 col-md-6 offset-md-1">
                 <form action="" method="POST">
                     {% csrf_token %}
                     <div class="row">
@@ -22,6 +27,38 @@
                     </div>
 
                 </form>
+            </div>
+            <div class="col-12 col-md-4 ps-md-5">
+                <div>
+                    <ul class="list-group mt-4 pr-5">
+                        <li class="list-group-item border-0 list-group-item-action">
+                            <i class=" icofont icofont-2x icofont-email icofont-pull-left secondary_color"></i>
+                            <span class=" text-muted h6">Email</span>
+                            <p><b>supersonicdev@biz.com</b></p>
+
+                        </li>
+                        <li class="list-group-item border-0 list-group-item-action">
+                            <i class=" icofont icofont-2x icofont-mobile-phone icofont-pull-left secondary_color"></i>
+                            <span class=" text-muted h6">Mobile</span>
+                            <p><b>+1 555- 666- 7171</b></p>
+                        </li>
+                        <li class="list-group-item border-0 list-group-item-action">
+                            <i class=" icofont icofont-2x icofont-whatsapp icofont-pull-left secondary_color"></i>
+                            <span class=" text-muted h6">WhatsApp</span>
+                            <p><b>+1 555- 666- 1717</b></p>
+                        </li>
+                        <li class="list-group-item border-0 list-group-item-action">
+                            <i class=" icofont icofont-2x icofont-contact-add icofont-pull-left secondary_color"></i>
+                            <span class=" text-muted h6">Business</span>
+                            <p><b>Floor 65 melbourne complex
+                                    <br />&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;
+                                    blcok 7 simpleton road.
+                                </b>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

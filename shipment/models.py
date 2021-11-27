@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from datetime import timedelta
+from django.urls import reverse
 
 # Create your models here.
 
@@ -22,6 +24,9 @@ class ItemSender(models.Model):
 
     def __str__(self):
         return f'{self.user}'
+    
+    def get_absolute_url(self):
+        return reverse('user', args=[self.user.username])
 
 
 class ItemReciever(models.Model):  
@@ -77,7 +82,11 @@ class ItemDetail (models.Model):
     item_code = models.CharField(max_length=20)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
-
+    
+    @property
+    def delivery_frame(self):
+        date_delivery = timezone.now() + timedelta(7)
+        return f"{date_delivery}"
 
     class Meta:
         ordering = ('-date_sent', '-date_recieved')
