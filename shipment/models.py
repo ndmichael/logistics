@@ -55,7 +55,7 @@ class ItemDetail (models.Model):
     '''
 
     STATUS= (
-        ('pending', 'PENDING'),
+        ('pending', 'ON ROUTE'),
         ('sent', 'SENT'),
         ('delivered', 'DELIVERED'),       
     )
@@ -75,18 +75,14 @@ class ItemDetail (models.Model):
     quantity = models.IntegerField()
     description = models.TextField(max_length= 1000)
     weight = models.CharField(max_length=10)
-    image = models.ImageField(upload_to='food_photos', default='default.jpg')
+    image = models.ImageField(upload_to='package_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
     status = models.CharField(choices=STATUS, default='PENDING', max_length=15)
     problem_type = models.CharField(choices=PROBLEM, default='NO PROBLEM', max_length=15)
     item_code = models.CharField(max_length=20)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
-    
-    @property
-    def delivery_frame(self):
-        date_delivery = timezone.now() + timedelta(7)
-        return f"{date_delivery}"
+    delivery_frame = models.DateTimeField(default=timezone.now() + timedelta(7))
 
     class Meta:
         ordering = ('-date_sent', '-date_recieved')

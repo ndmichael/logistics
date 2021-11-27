@@ -12,10 +12,15 @@
         {% if item %}
         <article class="row ">
             <div class="col-12 offset-md-1 col-md-5 p-3 mx-auto">
+                <div class="mb-3  d-flex justify-content-between">
+                    <p style="display: inline-block;" class="text-muted">Expected Delivery Date: </p>
+                    <h4 class="secondary_color py-1">{{item.delivery_frame|date:"l, d M, Y"}}</h4>
+                </div>
                 <div class=" d-flex justify-content-between">
                     <h3 style="display: inline-block;" class="pr-4">Senders Name: </h3>
-                    <p class="secondary_color py-1">{{ item.item_sender }}</p>
+                    <p class="secondary_color py-1"><b>{{ item.item_sender }}</b></p>
                 </div>
+
                 <div class=" d-flex justify-content-between pt-3">
                     <div>
                         <h4 style="display: inline-block;">Item Name: </h4>
