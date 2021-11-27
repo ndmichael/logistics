@@ -5,3 +5,5 @@ from django.shortcuts import render
 def dashboard(request, username):
     context = {}
     return render(request, 'account/user/dashboard.html', context)
+
+
