@@ -27,7 +27,7 @@ SECRET_KEY =os.environ.get("SECRET_KEY_APP")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
 
-ALLOWED_HOSTS = ['https://sdelivery.herokuapp.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['sdelivery.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 SITE_ID = 1
