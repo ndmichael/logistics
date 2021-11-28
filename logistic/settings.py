@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.facebook',
     "django.contrib.sites",
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -171,3 +172,17 @@ ACCOUNT_LOGOUT_REDIRECT_URL = "account_login"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID_MIKE")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY_MIKE")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_SDELIVERY")
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_S3_REGION_NAME = "us-east-2"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+AWS_DEFAULT_UCL = None
+
+if not DEBUG:
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
