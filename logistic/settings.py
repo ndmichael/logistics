@@ -27,6 +27,7 @@ SECRET_KEY =os.environ.get("SECRET_KEY_APP")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
 
+
 ALLOWED_HOSTS = ['sdelivery.herokuapp.com', '127.0.0.1', 'localhost']
 
 
@@ -184,5 +185,5 @@ AWS_S3_SIGNATURE_VERSION = "s3v4"
 
 AWS_DEFAULT_UCL = None
 
-if not DEBUG:
+if DEBUG:
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
