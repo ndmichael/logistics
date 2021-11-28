@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+.secondary_color {
+    color: #555dc1;
+    /* color: #a4acdc; */
+}
+
+
+/* .testimonial:hover .icofont {
+    color: #f;
+} */
+
+.navbar-light {
+    padding: 0px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 1);
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    font-family: 'Avalon';
+    font-size: 18px;
+    /* padding: 10px; */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #555dc1;
+}
+
+#header {
+    min-height: 77vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.feature {
+    min-height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("/static/shipment/images/Transparent-background-with-dots.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#services2 {
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.4), rgba(54, 55, 151, 0.9)), url("/static/shipment/images/truck2.jpg");
+    background-size: cover;
+    background-position: left;
+    color: #FFFFFF;
+}
+
+#services2 ul>li {
+    text-decoration-style: none;
+    list-style-type: none;
+    font-family: 'Gotham Rounded';
+    text-shadow: -2px 2px #000;
+    font-size: 22px;
+    line-height: 2;
+    text-transform: capitalize;
+}
+
+#services2 h4 {
+    color: orange;
+    text-shadow: -2px 2px #000;
+}
+
+#services2 p {
+    text-shadow: -2px 2px #080808;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h6 {
+    /* font-family: 'Black Han Sans', sans-serif; */
+    font-family: 'Gotham Rounded';
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+p {
+    font-family: 'Avalon';
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+#header h1 {
+    font-size: 48px;
+}
+
+
+/* #header a{
+    background-color: rgba(75, 0, 130, 0.87);
+} */
+
+.custom-shape-divider-bottom-1620085333 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1620085333 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 55px;
+}
+
+.custom-shape-divider-bottom-1620085333 .shape-fill {
+    fill: #FFFFFF;
+}
+
+#brief-abt {
+    text-align: center;
+}
+
+#brief-abt h2 span {
+    font-weight: 900;
+    color: #7b83eb;
+}
+
+#brief-abt p {
+    font-size: 18px;
+}
+
+.service .icofont {
+    filter: drop-shadow(20px 10px 0.5px #e0e0e0);
+    display: inline-block;
+    transform: translate(0, 0);
+}
+
+.service:hover .icofont {
+    animation: icon_animate1 .4s forwards;
+    transition: all 10s;
+}
+
+@keyframes icon_animate1 {
+    0% {
+        filter: drop-shadow(20px 10px 0.5px #e0e0e0);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 0px rgb(56, 56, 56));
+    }
+}
+
+
+/*
+* testimonial animation
+*/
+
+.testimonial img,
+.testimonial .icofont {
+    transition: transform .5s, color .5s;
+    transform-origin: top;
+}
+
+.testimonial:hover .icofont {
+    color: #555dc1 !important;
+}
+
+.testimonial:hover img {
+    transform: scale(1.05, 1.05);
+}
+
+
+/** footer **/
+
+footer {
+    padding: 2em 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #7b83eb;
+}
+
+footer a:hover {
+    color: #555dc1;
+}
