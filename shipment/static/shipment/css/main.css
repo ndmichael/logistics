@@ -10,7 +10,7 @@
 } */
 
 .navbar-light {
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -20,20 +20,15 @@
     letter-spacing: 1.2px;
     font-family: 'Avalon';
     font-size: 18px;
-    padding: 15px;
+    /* padding: 10px; */
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: #555dc1;
 }
 
-.navbar-light .navbar-brand {
-    color: #7b83eb !important;
-    font-size: 28px;
-}
-
 #header {
-    min-height: 75vh;
+    min-height: 77vh;
     width: 100%;
     background-image: linear-gradient(to right, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg2.jpg");
     background-size: cover;
