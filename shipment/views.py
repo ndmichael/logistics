@@ -9,10 +9,10 @@ from django.core.mail import send_mail, BadHeaderError
 
 
 def index (request):
-    return render(request, 'shipment/index.html')
+    return render(request, 'shipment/index.html', {'title': 'home'})
 
 def about (request):
-    return render(request, 'shipment/about.html')
+    return render(request, 'shipment/about.html', {'title': 'about'})
 
 def track_item (request):
     form = ItemTrackForm()
@@ -25,12 +25,13 @@ def track_item (request):
             
     context = {
         'form': form,
-        'item': item
+        'item': item,
+        'title': 'tracking'
     }
     return render(request, 'shipment/track.html', context)
 
 def services (request):
-    return render(request, 'shipment/services.html')
+    return render(request, 'shipment/services.html', {'title': 'services'})
 
 def contact (request):
     form = ContactForm()
@@ -51,6 +52,7 @@ def contact (request):
     
 
     context = {
-        'form': form
+        'form': form,
+        'title': 'contact Us'
     }                           
     return render(request, 'shipment/contact.html', context)
