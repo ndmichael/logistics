@@ -10,7 +10,8 @@
         <div class=" row">
             <div class=" col-12 col-md-6 offset-md-1">
                 <form action="" method="POST">
-                    {% csrf_token %}
+                    {% csrf_token %} {{ form|crispy }} {#
+                    <!--
                     <div class="row">
                         <div class="form-group col-md-6 mb-0">
                             {{ form.name|as_crispy_field }}
@@ -21,7 +22,7 @@
                         <div class="form-group col-md-12 mb-0">
                             {{ form.message|as_crispy_field }}
                         </div>
-                    </div>
+                    </div> -->%}
                     <div class="d-grid gap-2 py-3">
                         <input type="submit" class=" btn btn-lg btn-warning  shadow" value="Contact Us">
                     </div>
@@ -53,7 +54,7 @@
                             <p><b>Floor 65 melbourne complex
                                     <br />&nbsp;&nbsp;&nbsp;
                                     &nbsp;&nbsp;&nbsp;
-                                    blcok 7 simpleton road.
+                                    block 7 simpleton road.
                                 </b>
                             </p>
                         </li>
