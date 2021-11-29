@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY_SDELIVERY")
 
 
 # # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
+DEBUG = DEBUG = os.environ.get("DEBUG_VALUE") == "True"
+print(DEBUG)
 # DEBUG=True
 
 
