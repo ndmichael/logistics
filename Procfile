@@ -1,1 +1,1 @@
-web: gunicorn  logistic.wsgi 
+web: gunicorn  logsiticWebsite.wsgi 
