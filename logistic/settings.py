@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,9 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-27*_p^$)pg6)=0arhh_eb4mq+%3s#d!o2*vch9dxj&vp_&hi=6'
-# SECRET_KEY = os.environ.get("SECRET_KEY_APP")
-# print(SECRET_KEY)
+# SECRET_KEY = 'django-insecure-27*_p^$)pg6)=0arhh_eb4mq+%3s#d!o2*vch9dxj&vp_&hi=6'
+SECRET_KEY = os.environ.get("SECRET_KEY_APP")
 
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
@@ -93,10 +93,18 @@ WSGI_APPLICATION = 'logistic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("SD_DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PW"),
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
+os.environ.get("DB_USER")
+os.environ.get("DB_PW")
 
 
 # Password validation
@@ -189,3 +197,8 @@ AWS_DEFAULT_UCL = None
 
 if DEBUG:
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+
+
+
+django_heroku.settings(locals())
