@@ -83,6 +83,7 @@ h6 {
     font-family: 'Gotham Rounded';
     font-weight: 100;
     text-transform: capitalize;
+    letter-spacing: 0 !important;
 }
 
 p {
@@ -171,6 +172,19 @@ p {
 
 .testimonial:hover img {
     transform: scale(1.05, 1.05);
+}
+
+#charity-sc {
+    background: #555dc1;
+    margin: 10em auto;
+}
+
+#charity-sc video {
+    transform: scaleY(1.2);
+    object-fit: cover;
+    object-position: top;
+    height: 450px;
+    width: 95% !important;
 }
 
 
