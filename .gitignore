@@ -9,7 +9,7 @@ __pycache__
 db.sqlite3
 media
 venv
-images
+# images
 
 # Backup files #
 *.bak
