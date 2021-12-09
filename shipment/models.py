@@ -55,7 +55,8 @@ class ItemDetail (models.Model):
     '''
 
     STATUS= (
-        ('pending', 'ON ROUTE'),
+        ('transit', 'ON TRANSIT'),
+        ('withheld', 'WITHHELD'), 
         ('sent', 'SENT'),
         ('delivered', 'DELIVERED'),       
     )
@@ -77,11 +78,13 @@ class ItemDetail (models.Model):
     weight = models.CharField(max_length=10)
     image = models.ImageField(upload_to='package_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
-    status = models.CharField(choices=STATUS, default='PENDING', max_length=15)
+    shipped = models.BooleanField(default=False)
+    status = models.CharField(choices=STATUS, default='transit', max_length=15)
     problem_type = models.CharField(choices=PROBLEM, default='NO PROBLEM', max_length=15)
     item_code = models.CharField(max_length=20)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
+    date_shipped = models.DateTimeField(default=timezone.now() + timedelta(1))
     delivery_frame = models.DateTimeField(default=timezone.now() + timedelta(7))
 
     class Meta:
