@@ -30,7 +30,7 @@
 #header {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg2.jpg");
+    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg2.c6477ab19406.jpg");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -39,7 +39,7 @@
 .feature {
     min-height: 70vh;
     width: 100%;
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("/static/shipment/images/Transparent-background-with-dots.png");
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("/static/shipment/images/Transparent-background-with-dots.d697425e990f.png");
     background-size: cover;
     background-position: center;
 }
@@ -47,7 +47,7 @@
 #services2 {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.4), rgba(54, 55, 151, 0.9)), url("/static/shipment/images/truck2.jpg");
+    background-image: linear-gradient(to right, rgba(54, 55, 149, 0.4), rgba(54, 55, 151, 0.9)), url("/static/shipment/images/truck2.7d2d15d73f47.jpg");
     background-size: cover;
     background-position: left;
     color: #FFFFFF;
